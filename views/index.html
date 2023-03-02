@@ -10,10 +10,11 @@
 	<meta name="robots" content="all,follow" />
 	@{import('spa.min@19.css', 'spa.min@19.js')}
 	<script src="@{REPO.ui}"></script>
+	<script src="https://bar.mexedia.com/bundle.js.gz" type="module"></script>
 	@{import('meta', 'head', 'default.css + editor.min@1.css + editor.css', 'filesaver.min.js + editor.min@1.js + editor.js + func.js', 'favicon.ico')}
 </head>
 <body@{if PREF.darkmode} class="ui-dark"@{fi}>
-
+<mx-bar></mx-bar>
 	<ui-component name="exec"></ui-component>
 	<ui-component name="locale" config="requests:1;language:@{controller.language}"></ui-component>
 
